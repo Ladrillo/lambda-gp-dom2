@@ -1,8 +1,16 @@
-const callbackLoaded = () => console.log('page loaded!');
-const callbackDOMContentLoaded = () => console.log('DOM content loaded!');
-window.addEventListener('load', callbackLoaded);
-window.addEventListener('DOMContentLoaded', callbackDOMContentLoaded);
-console.log('not loaded yet');
+const body = document.body;
+
+const container = document.querySelector('#container');
+const section = document.querySelector('#catsSection');
+const heading = document.querySelector('#catsHeading');
+
+const buttonContainer = section.querySelector('.button-container');
+const button1 = buttonContainer.querySelector('button:nth-of-type(1)');
+const button2 = buttonContainer.querySelector('button:nth-of-type(2)');
+
+// EVENTS
+// 0- What is an event? Types of events.
+
 // EVENT HANDLERS
 // 1- Put an onclick attribute on an element in the html (console.log something).
 // 2- Put an onclick on an element in javascript.
@@ -27,11 +35,3 @@ console.log('not loaded yet');
 
 // STOP PROPAGATION VS. STOP IMMEDIATE PROPAGATION
 // 15- What's the difference between the two?
-
-
-const body = document.body;
-const heading = document.querySelector('#catsHeading')
-const container = document.querySelector('#container');
-const buttonContainer = document.querySelector('.button-container');
-const button1 = document.querySelector('button:nth-of-type(1)');
-const button2 = document.querySelector('button:nth-of-type(2)');
