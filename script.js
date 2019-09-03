@@ -8,7 +8,26 @@ const buttonContainer = section.querySelector('.button-container');
 const button1 = buttonContainer.querySelector('button:nth-of-type(1)');
 const button2 = buttonContainer.querySelector('button:nth-of-type(2)');
 
-console.log('gaga')
+let counter = 0;
+
+// hey browser, when the button1 gets clicked
+// go ahead and invoke that callback
+// which I passed as second arg
+// FOR ME
+button1.addEventListener('click', (eventObject) => {
+  console.log('DA BUTTON GOT CLICKED ALRIGHT');
+  console.log(eventObject);
+  counter++;
+  heading.textContent = counter;
+});
+
+button1.addEventListener('click', (e) => {
+  console.log('gaga');
+});
+
+// document.addEventListener('click', () => {
+//   console.log('DOCUMENT GOT CLICKED');
+// });
 
 // EVENTS
 // 0- What is an event? Types of events.
