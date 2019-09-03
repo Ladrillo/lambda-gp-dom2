@@ -25,6 +25,10 @@ button1.addEventListener('click', (e) => {
   console.log('gaga');
 });
 
+button2.onclick = function () {
+  console.log('cancel click');
+};
+
 // document.addEventListener('click', () => {
 //   console.log('DOCUMENT GOT CLICKED');
 // });
