@@ -10,31 +10,51 @@ const button2 = buttonContainer.querySelector('button:nth-of-type(2)');
 
 let counter = 0;
 
+
+// how the event travels through the DOM
+// we are going to center discussion on the "click" event
+// useful things on the event object -- 2 keys are very important
+
+// event target event.eventTarget
+// the target is the innermost thing we click
+function logTarget(e) {
+  console.log('.');
+  console.log('the event target is ', e.target);
+  console.log('the current target is ', e.currentTarget);
+  console.log('.');
+}
+
+document.querySelectorAll('*')
+  .forEach(el => el.addEventListener('click', logTarget));
+
+section.removeEventListener('click', logTarget);
+
+
 // hey browser, when the button1 gets clicked
 // go ahead and invoke that callback
 // which I passed as second arg
 // FOR ME
-button1.addEventListener('click', (eventObject) => {
-  console.log('DA BUTTON GOT CLICKED ALRIGHT');
-  console.log(eventObject);
-  counter++;
-  heading.textContent = counter;
-});
+// button1.addEventListener('click', (eventObject) => {
+//   console.log('DA BUTTON GOT CLICKED ALRIGHT');
+//   console.log(eventObject);
+//   counter++;
+//   heading.textContent = counter;
+// });
 
-button1.addEventListener('click', (e) => {
-  console.log('gaga');
-});
+// button1.addEventListener('click', (e) => {
+//   console.log('gaga');
+// });
 
-button2.onclick = function () {
-  console.log('cancel click');
-};
+// button2.onclick = function () {
+//   console.log('cancel click');
+// };
 
-window.addEventListener('resize', () => {
-  if (!document.body.style.opacity) {
-    document.body.style.opacity = 1;
-  }
-  document.body.style.opacity = Number(document.body.style.opacity) * 0.9;
-});
+// window.addEventListener('resize', () => {
+//   if (!document.body.style.opacity) {
+//     document.body.style.opacity = 1;
+//   }
+//   document.body.style.opacity = Number(document.body.style.opacity) * 0.9;
+// });
 // heading.onclick = function() {
 //   this.style.display = 'none';
 // };
