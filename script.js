@@ -29,6 +29,27 @@ button2.onclick = function () {
   console.log('cancel click');
 };
 
+window.addEventListener('resize', () => {
+  if (!document.body.style.opacity) {
+    document.body.style.opacity = 1;
+  }
+  document.body.style.opacity = Number(document.body.style.opacity) * 0.9;
+});
+// heading.onclick = function() {
+//   this.style.display = 'none';
+// };
+
+// heading.addEventListener('click', () => {
+//   heading.textContent = "";
+// });
+
+// heading.addEventListener('click', (event) => {
+//   event.target.style.display = 'none';
+// });
+
+// self destructing heading
+// on click of the heading, it should disappear
+
 // document.addEventListener('click', () => {
 //   console.log('DOCUMENT GOT CLICKED');
 // });
